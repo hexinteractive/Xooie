@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link href='http://fonts.googleapis.com/css?family=Roboto:300,900&effect=3d-float' rel='stylesheet' type='text/css'>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<title>Vertical Carousel</title>
+<style name="horizontal">
+
+.x-demo-carousel-h {
+    min-width: 200px;
+    max-width: 800px;
+    background-color: lightgrey;
+    padding: 5px 80px;
+    position: relative;
+    /*height: 80px;*/
+        border:2px dotted cyan;
+}
+
+.x-demo-carousel-h .xooie-carousel-content {
+  border: 1px solid #434345;
+}
+.x-demo-carousel-h .xooie-carousel-content li {
+    height: 50px;
+    width: 50px;
+    background-color: pink;
+    margin-right: 10px;
+    font-size: 10px;
+    color: white;
+    text-align: center;
+    line-height: 5em;
+}
+.x-demo-carousel-h .xooie-carousel-content li:nth-child(3n+1) {
+    background: hotpink;
+}
+
+.x-demo-carousel-h .xooie-carousel-content li:nth-child(3n+2) {
+    background: deeppink;
+}
+
+.x-demo-carousel-h .xooie-carousel-content:last-child {
+    margin-right: 0;
+}
+
+.x-demo-carousel-h .xooie-carousel-control {
+    position: absolute;
+    top: 20px;
+}
+
+.x-demo-carousel-h .xooie-carousel-control.left {
+    left: 0;
+}
+
+.x-demo-carousel-h .xooie-carousel-control.right {
+    right: 0;
+}
+
+</style>
+<!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
+<style name="vertical">
+
+.x-demo-carousel-v {
+    /*min-height: 200px;*/
+    /*max-height: 300px;*/
+    background-color: lightgrey;
+    /*padding: 5px 80px;*/
+    padding: 80px 5px;
+    position: relative;
+    /*width: 80px;*/
+    border:2px dotted cyan;
+
+}
+
+.x-demo-carousel-v .xooie-carousel-v-wrapper {
+    max-height: 300px;
+}
+
+.x-demo-carousel-v .xooie-carousel-content,
+.x-demo-carousel-v .xooie-carousel-v-content {
+  border: 1px solid #434345;
+  /*height: 100px;*/
+}
+
+.x-demo-carousel-v .xooie-carousel-content > *,
+.x-demo-carousel-v .xooie-carousel-v-content > * {
+    display: block;
+}
+
+.x-demo-carousel-v .xooie-carousel-content li,
+.x-demo-carousel-v .xooie-carousel-v-content li  {
+    height: 50px;
+    /*width: 50px;*/
+    width: 200px;
+    background-color: pink;
+    margin-bottom: 10px;
+    font-size: 10px;
+    color: white;
+    text-align: center;
+    line-height: 5em;
+}
+.x-demo-carousel-v .xooie-carousel-content li:nth-child(3n+1),
+.x-demo-carousel-v .xooie-carousel-v-content li:nth-child(3n+1) {
+    background: hotpink;
+}
+
+.x-demo-carousel-v .xooie-carousel-content li:nth-child(3n+2),
+.x-demo-carousel-v .xooie-carousel-v-content li:nth-child(3n+2) {
+    background: deeppink;
+}
+
+.x-demo-carousel-v .xooie-carousel-content:last-child,
+.x-demo-carousel-v .xooie-carousel-v-content:last-child {
+    margin-right: 0;
+}
+
+.x-demo-carousel-v .xooie-carousel-control,
+.x-demo-carousel-v .xooie-carousel-v-control {
+    position: absolute;
+    /*top: 20px;*/
+    left: 25%;
+}
+
+.x-demo-carousel-v .xooie-carousel-control.left,
+.x-demo-carousel-v .xooie-carousel-v-control.left {
+    /*left: 0;*/
+    top: 0;
+}
+
+.x-demo-carousel-v .xooie-carousel-control.right,
+.x-demo-carousel-v .xooie-carousel-v-control.right {
+    /*right: 0;*/
+    bottom: 0;
+}
+
+.x-demo-carousel-v .is-left-limit.is-right-limit [data-x-role^="control:left"],
+.x-demo-carousel-v .is-left-limit.is-right-limit [data-x-role^="control:right"] {
+    display: block;
+    border: 1px solid red;
+}
+
+
+</style>
+
+
+</head>
+<body class="">
+<h1>V</h1>
+
+<div class="x-demo-carousel-h" data-widget-type="carousel">
+    <button class="left" data-x-role="control:left 1 item">Left</button>
+
+    <ul data-x-role="content">
+        <li>foo</li>
+        <li>foo</li>
+        <li>foo</li>
+        <li>foo</li>
+        <li>foo</li>
+        <li>foo</li>
+        <li>foo</li>
+        <li>foo</li>
+        <li>foo</li>
+        <li>foo</li>
+        <li>foo</li>
+        <li>foo</li>
+        <li>foo</li>
+        <li>foo</li>
+        <li>foo</li>
+        <li>foo</li>
+        <li>foo</li>
+        <li>foo</li>
+        <li>foo</li>
+        <li>foo</li>
+        <li>foo</li>
+        <li>foo</li>
+        <li>foo</li>
+    </ul>
+
+    <button class="right" data-x-role="control:right 1 item">Right</button>
+</div>
+
+<!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
+
+<div class="x-demo-carousel-v" data-widget-type="carousel_v">
+    <button class="left" data-x-role="control:left 1 item">Left</button>
+
+    <ul data-x-role="content">
+        <li>foo</li>
+        <li>foo</li>
+        <li>foo</li>
+        <li>foo</li>
+        <li>foo</li>
+        <li>foo</li>
+        <li>foo</li>
+        <li>foo</li>
+        <li>foo</li>
+        <li>foo</li>
+        <li>foo</li>
+        <li>foo</li>
+        <li>foo</li>
+        <li>foo</li>
+        <li>foo</li>
+        <li>foo</li>
+        <li>foo</li>
+        <li>foo</li>
+        <li>foo</li>
+        <li>foo</li>
+        <li>foo</li>
+        <li>foo</li>
+        <li>foo</li>
+    </ul>
+
+    <button class="right" data-x-role="control:right 1 item">Right</button>
+</div>
+
+
+</body>
+<!-- <script type="text/javascript" src="http://code.jquery.com/jquery-1.7.1.min.js"></script> -->
+<script src="lib/require.js"></script>
+<script src="lib/jquery.js"></script>
+<script src="xooie/xooie.js"></script>
+<script>
+
+//NOTE: accordion extends tab
+
+// define('xooie/widgets/carouselv', ['jquery', 'xooie/helpers', 'xooie/widgets/carousel', 'xooie/event_handler'], function($, helpers, Carousel, EventHandler) {
+//   var Carouselv, timers;
+//   Carouselv = Carousel.extend(function(){})
+
+//   Carouselv.define('namespace', 'carouselv');
+
+//   return Carouselv;
+// });
+
+
+
+Xooie.config({
+    // Widgets: {
+    //     carouselv: "path/to/module"
+    // }
+})
+
+jQuery(document).ready(function($) {
+
+
+});
+
+
+
+</script>
+</html>
