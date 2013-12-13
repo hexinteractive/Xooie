@@ -508,6 +508,7 @@ define('xooie/widgets/carousel', ['jquery', 'xooie/helpers', 'xooie/widgets/base
 
   Carousel.createStyleRule('.' + Carousel.prototype.contentClass(), {
     display: 'table-cell',
+    'overflow': 'visible', /*fix for IE7 IE8*/
     'white-space': 'nowrap',
     'font-size': '0px',
     'transition': 'left 0.5s'
